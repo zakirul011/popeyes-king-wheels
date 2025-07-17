@@ -1,0 +1,524 @@
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.selected-color,
+.selected-boxed,
+.config-content-title,
+.preview-wheel,
+.error-wrap,
+.thankyou-area,
+.contact-form-area,
+.config-content,
+.select-color-main,
+.choose-color-category ul li,
+.config-category,
+.config-content-wrap,
+.config-pointer,
+.placeholder-logo,
+.config-part-category img,
+.choose-color-page,
+.select-color-category,
+.select-color-title h5,
+.choose-color-title h5,
+.threeD-btn,
+.invert-btn,
+.action-btns button,
+.config-navigation {
+  display: none;
+  animation: 0.5s fadeEffect ease;
+}
+.choose-color-main > i.running-move {
+  display: none;
+}
+.config-part-category img {
+  animation-duration: 0s;
+}
+.selected-color.active,
+.selected-boxed.active,
+.thankyou-area.active,
+.contact-form-area.active,
+.config-content.active,
+.select-color-main.active,
+.config-category.active,
+.config-content-wrap.active,
+.config-pointer.active,
+.placeholder-logo.active,
+.config-part-category img.active,
+.select-color-category.active,
+.select-color-title h5.active,
+.choose-color-title h5.active,
+.config-navigation.active {
+  display: block;
+}
+
+.preview-wheel.active,
+.config-content-title.active,
+.error-wrap.active,
+.choose-color-page.active {
+  display: flex;
+}
+.choose-color-main > i.running-move.active,
+.choose-color-category,
+.choose-color-category ul li.active,
+.threeD-btn.active,
+.invert-btn.active,
+.action-btns button.active {
+  display: inline-block;
+}
+.color-fixed {
+  display: inline-block !important;
+}
+
+.boxed-blur,
+.select-color-category.boxed-blur:first-child {
+  filter: blur(8px);
+  pointer-events: none !important;
+  display: block;
+}
+.selected-color-wrap.boxed-blur {
+  display: flex;
+}
+.select-color-category.boxed-blur {
+  display: none;
+}
+.clean-color {
+  margin-right: 10px;
+  color: #fff;
+  transition: 0.3s ease;
+  opacity: 0.1;
+  pointer-events: none;
+  cursor: pointer;
+}
+.clean-color:hover {
+  color: var(--theme-color);
+}
+
+.clean-color.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.config-pointer-wrap,
+.config-part-page,
+.config-part-category img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.config-pointer-wrap {
+  z-index: 99;
+}
+.config-navigation-wrap {
+  position: relative;
+}
+.placeholder-logo {
+  padding: 50px 0;
+}
+.selected-color {
+  transition: 0.3s ease;
+}
+.config-category ul li span {
+  color: var(--theme-color);
+  margin-left: 5px;
+  transform: translateY(-10px);
+  font-size: 16px;
+}
+.config-wheel-wrap {
+  position: relative;
+  display: inline-block;
+}
+.wheel-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%);
+}
+/* navigation */
+.navigation-slider ul {
+  display: flex;
+  transition: 0.3s ease;
+}
+.navigation-slider ul li {
+  position: relative;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+.navigation-slider ul li:hover,
+.navigation-slider ul li.active {
+  color: var(--theme-color);
+}
+.navigation-slider ul li::after {
+  content: "\f058";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  color: #00184e;
+  font-size: 25px;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+.navigation-slider ul li.active::after {
+  opacity: 1;
+}
+.navigation-slider {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.navigation-slider ul li img {
+  max-width: 120px;
+}
+.navigation-arrow button {
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  position: absolute;
+  left: -2%;
+  top: 44%;
+  transform: translate(0, -50%);
+  margin: 0;
+  border-radius: 50%;
+  border: 0;
+  background: #000;
+  color: #fff;
+  transition: 0.3s ease;
+}
+.navigation-arrow button:hover {
+  background: var(--theme-color);
+  color: #000;
+}
+.navigation-arrow button.arrow-next {
+  right: -2%;
+  left: auto;
+}
+
+.last-preview-config {
+  position: relative;
+}
+
+/* pointer css */
+.pointer-name {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  background: var(--theme-color);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0;
+}
+.pointer-name::after {
+  position: absolute;
+  content: "";
+  height: 315px;
+  width: 2px;
+  background: var(--theme-color);
+  transform: rotate(-34.5deg);
+  transform-origin: top right;
+  top: 100%;
+  right: 20px;
+}
+.pointer-name::before {
+  position: absolute;
+  content: "";
+  background: var(--theme-color);
+  box-shadow: 3.5px 6.062px 24px 0px rgba(0, 0, 0, 1);
+  width: 10px;
+  height: 10px;
+  top: 100%;
+  right: 20px;
+  border-radius: 50%;
+  transform: translate(60%);
+}
+.pointer {
+  background: var(--theme-color);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  box-shadow: 3.5px 6.062px 24px 0px rgba(0, 0, 0, 1);
+  display: block;
+  position: absolute;
+  left: 38%;
+  top: 41%;
+}
+
+.face-letter .pointer {
+  left: 60%;
+  top: 44%;
+}
+.face-letter .pointer-name::after {
+  height: 415px;
+  transform: rotate(-48.5deg) translate(-2px);
+}
+
+.face .pointer {
+  left: 38%;
+  top: 33%;
+}
+.face .pointer-name::after {
+  transform: rotate(-48.5deg) translate(-2px);
+  height: 295px;
+}
+
+.cap-letter .pointer {
+  top: 48%;
+  left: 46%;
+}
+.cap-letter .pointer-name::after {
+  height: 380px;
+  transform: rotate(-34.5deg);
+}
+
+.cap .pointer {
+  left: 45%;
+  top: 49%;
+}
+.cap .pointer-name::after {
+  height: 420px;
+  transform: rotate(-41deg) translate(-2px);
+}
+
+.bolts .pointer {
+  left: 22%;
+  top: 20%;
+}
+.bolts .pointer-name::after {
+  height: 120px;
+  transform: rotate(-40.5deg) translate(-2px);
+}
+
+.outer-barrel .pointer {
+  left: 25%;
+  top: 13%;
+}
+.outer-barrel .pointer-name::after {
+  height: 40px;
+}
+
+.inner-barrel .pointer-name {
+  top: 93%;
+}
+.inner-barrel .pointer-name::before {
+  bottom: 100%;
+  top: auto;
+}
+.inner-barrel .pointer-name::after {
+  transform: rotate(51.5deg) translate(-2px);
+  transform-origin: bottom right;
+  top: auto;
+  bottom: 100%;
+  height: 152px;
+}
+.inner-barrel .pointer {
+  left: 36%;
+  top: 79%;
+}
+
+.barrel-letter .pointer {
+  left: 36%;
+  top: 6%;
+}
+.barrel-letter .pointer-name::after {
+  height: 110px;
+  transform: rotate(-100.5deg);
+}
+/* kg1 pointer */
+.kg1-config .assents .pointer-name::after {
+  height: 270px;
+  transform: rotate(-29.5deg);
+}
+.kg1-config .assents .pointer {
+  left: 32%;
+  top: 37%;
+}
+.kg1-config .bolts .pointer {
+  left: 45%;
+  top: 40%;
+}
+.kg1-config .bolts .pointer-name::after {
+  height: 330px;
+  transform: rotate(-42.5deg) translate(-2px);
+}
+
+/* ganja pointer */
+.wheel-ganja .face-letter .pointer-name::after {
+  height: 640px;
+  transform: rotate(-22.5deg) translate(-2px);
+}
+.wheel-ganja .face-letter .pointer {
+  left: 50%;
+  top: 82%;
+}
+.wheel-ganja .accents .pointer {
+  top: 26%;
+  left: 27.5%;
+}
+.wheel-ganja .accents .pointer-name::after {
+  height: 173px;
+}
+.wheel-ganja .bolts .pointer {
+  top: 23%;
+}
+.wheel-ganja .bolts .pointer-name::after {
+  height: 140px;
+  transform: rotate(-34.5deg) translate(-2px);
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .wheel-ganja .face-letter .pointer-name::after {
+    height: 435px;
+  }
+  .wheel-ganja .bolts .pointer-name::after {
+    height: 96px;
+  }
+  .wheel-ganja .accents .pointer-name::after {
+    height: 115px;
+  }
+}
+
+/* wheel-420 wheel-*/
+.wheel-420 .face-letter .pointer-name::after {
+  height: 640px;
+  transform: rotate(-22.5deg) translate(-2px);
+}
+.wheel-420 .face-letter .pointer {
+  left: 50%;
+  top: 82%;
+}
+.wheel-420 .face .pointer {
+  left: 43%;
+  top: 37%;
+}
+.wheel-420 .face .pointer-name::after {
+  height: 339px;
+}
+.wheel-420 .bolts .pointer {
+  top: 17%;
+  left: 29%;
+}
+.wheel-420 .bolts .pointer-name::after {
+  height: 146px;
+  transform: rotate(-63.5deg) translate(-2px);
+}
+.wheel-420 .accents .pointer {
+  top: 36%;
+  left: 34.5%;
+}
+.wheel-420 .accents .pointer-name::after {
+  height: 268px;
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+.wheel-420 .face .pointer-name::after {
+    height: 236px;
+  }
+.wheel-420 .face-letter .pointer-name::after {
+    height: 435px;
+  }
+.wheel-420 .bolts .pointer-name::after {
+    height: 96px;
+  }
+.wheel-420 .accents .pointer-name::after {
+    height: 181px;
+  }
+}
+
+/* wheel-gizzy */
+.wheel-gizzy .face-letter .pointer-name::after {
+  height: 648px;
+  transform: rotate(-25.5deg) translate(-2px);
+}
+.wheel-gizzy .face-letter .pointer {
+  left: 55%;
+  top: 82%;
+}
+.wheel-gizzy .face .pointer-name::after {
+  height: 215px;
+}
+.wheel-gizzy .face .pointer {
+  left: 31%;
+  top: 26%;
+}
+.wheel-gizzy .bolts .pointer {
+  top: 23%;
+}
+.wheel-gizzy .bolts .pointer-name::after {
+  height: 140px;
+  transform: rotate(-34.5deg) translate(-2px);
+}
+.wheel-gizzy .accents .pointer {
+  top: 29%;
+}
+.wheel-gizzy .accents .pointer-name::after {
+  height: 238px;
+  transform: rotate(-46.5deg) translate(-2px);
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .wheel-gizzy .accents .pointer-name::after {
+    height: 167px;
+  }
+  .wheel-gizzy .bolts .pointer-name::after {
+    height: 95px;
+  }
+  .wheel-gizzy .face .pointer-name::after {
+    height: 147px;
+  }
+  .wheel-gizzy .face-letter .pointer-name::after {
+    height: 447px;
+  }
+}
+
+/* wheel-primo */
+.wheel-primo .face-letter .pointer-name::after {
+  height: 648px;
+  transform: rotate(-25.5deg) translate(-2px);
+}
+.wheel-primo .face-letter .pointer {
+  left: 55%;
+  top: 82%;
+}
+.wheel-primo .bolts .pointer {
+  top: 23%;
+}
+.wheel-primo .bolts .pointer-name::after {
+  height: 140px;
+  transform: rotate(-34.5deg) translate(-2px);
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .wheel-primo .bolts .pointer-name::after {
+    height: 95px;
+  }
+  .wheel-primo .face-letter .pointer-name::after {
+    height: 447px;
+  }
+}
+
+/* wheel-ratchet */
+.wheel-ratchet .bolts .pointer {
+  top: 23%;
+}
+.wheel-ratchet .bolts .pointer-name::after {
+  height: 140px;
+  transform: rotate(-34.5deg) translate(-2px);
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .wheel-ratchet .bolts .pointer-name::after {
+    height: 95px;
+  }
+}
