@@ -1,15 +1,16 @@
 # Popeyes king wheels
 
-This project contains the following main folders:
+## 🛠️ Description
 
-- **main**: The main webpage of Popeyes king wheels.
-- **configuration**: The app to customly select the colors of the wheel which called configurationa app of Popeyes king wheels.
+- `website/` contains the homepage and other pages.
+- `configuration-app/` is a web app to customize the wheels of a car.
+- `designs/` includes visual references and design source files.
 
 ## Project Structure
 
 ```
 Popeyes king wheels/
-├── main/ # The main webpages
+├── website/ # The webpages
 ├── configurations/ # configuration app for customizing the wheels
 ├── designs/ # Style guides and external links to PSDs
 ├── README.md # You are here :)
